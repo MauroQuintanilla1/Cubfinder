@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/imagen_cub"
+            android:src="@drawable/cubiculos.img"
             android:scaleType="centerCrop"/>
 
         <TextView
@@ -39,6 +39,7 @@
 
 
         <Button
+            android:id="@+id/btn_reservar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reservar"
@@ -47,6 +48,7 @@
             android:layout_margin="16dp"/>
 
         <Button
+            android:id="@+id/btn_reportar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reportar un problema"
