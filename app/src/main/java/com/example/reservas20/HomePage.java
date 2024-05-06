@@ -27,33 +27,35 @@ public class HomePage extends TabActivity {
 
         // Segunda pestaña: Mesas
         Intent intentMesas = new Intent().setClass(this, MesasPage.class);
-        spec = tabHost.newTabSpec("Mesas");
-        ImageView iconoMesas = new ImageView(this);
-        iconoMesas.setImageResource(R.drawable.ic_mesa); // Asegúrate de que el nombre del icono sea correcto y esté en la carpeta res/drawable
-        spec.setIndicator(iconoMesas);
-
-        spec.setContent(intentMesas);
+        spec = tabHost.newTabSpec("Mesas").setIndicator("Mesas").setContent(intentMesas);
         tabHost.addTab(spec);
 
         // Tercera pestaña: casilleros
         Intent intentCasilleros = new Intent().setClass(this, CasillerosPage.class);
-        spec = tabHost.newTabSpec("Casilleros");
-        ImageView iconoCasilleros = new ImageView(this);
-        iconoCasilleros.setImageResource(R.drawable.ic_casillero); // Asegúrate de que el nombre del icono sea correcto y esté en la carpeta res/drawable
-        spec.setIndicator(iconoCasilleros);
-
-        spec.setContent(intentCasilleros);
+        spec = tabHost.newTabSpec("Casilleros").setIndicator("Casilleros").setContent(intentCasilleros);
         tabHost.addTab(spec);
 
         //Cuarta pestaña: Cerrar Sesion
         Intent intentCerrar = new Intent().setClass(this, CerrarSesionPage.class);
         spec = tabHost.newTabSpec("Cerrar Sesion");
         ImageView iconoCerrarSesion = new ImageView(this);
-        iconoCerrarSesion.setImageResource(R.drawable.cerrar_sesion); // Asegúrate de que el nombre del icono sea correcto y esté en la carpeta res/drawable
+        iconoCerrarSesion.setImageResource(R.drawable.cerrar_sesion);
         spec.setIndicator(iconoCerrarSesion);
 
         spec.setContent(intentCerrar);
         tabHost.addTab(spec);
+
+
+
+        //Pestaña con iconos
+        /*Intent intentCerrar = new Intent().setClass(this, CerrarSesionPage.class);
+        spec = tabHost.newTabSpec("Cerrar Sesion");
+        ImageView iconoCerrarSesion = new ImageView(this);
+        iconoCerrarSesion.setImageResource(R.drawable.cerrar_sesion);
+        spec.setIndicator(iconoCerrarSesion);
+
+        spec.setContent(intentCerrar);
+        tabHost.addTab(spec);*/
 
 
 
